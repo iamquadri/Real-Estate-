@@ -1,0 +1,514 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:ital,wght@0,200;0,300;0,700;1,200;1,300;1,600&family=Roboto&family=Signika+Negative:wght@300&display=swap');
+
+
+*{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all 0.2s linear;
+    text-transform: capitalize;
+}
+
+html{
+    font-size: 81.2%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --blue:  #0000ff;
+    --text-color-1:#555;
+    --text-color-2:#444;
+    --bg-color-1: #fff;
+    --bg-color-2: #eee;
+    --box-shadow: 0.5rem 1.5rem rgba(0,0,0,0.1);
+}
+
+body{
+    background: var(--bg-color-2);
+}
+
+.heading{
+    text-align: center;
+    padding-block-end: 2rem;
+    color: var(--text-color-1);
+    font-size: 4rem;
+}
+
+.heading span {
+    position: relative;
+    z-index: 0;
+}
+
+.heading span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    background: var(--blue);
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(0 90%, 100% 83%, 100% 100%, 0% 100%);
+}
+
+/* *********** Home section */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg-color-1);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem 7%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo{
+    font-weight: bolder;
+    font-size: 2.5rem;
+    color: var(--text-color-1);
+}
+
+.header .logo i{
+    color: var(--blue);
+}
+
+.header .search-form{
+    background: var(--bg-color-2);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    height: 4.5rem;
+    width: 50rem;
+}
+
+.header .search-form input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    font-size: 1.5rem;
+    color: var(--text-color-1);
+    padding: 1rem;
+}
+
+.header .search-form label{
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    color: var(--text-color-1);
+    cursor: pointer;
+}
+
+.header .search-form label:hover{
+    color: var(--orange);
+}
+
+.header .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    margin-left: 0.5rem;
+    background: var(--bg-color-2);
+    color: var(--text-color-2);
+    cursor: pointer;
+    text-align: center;
+}
+#search-btn{
+    display: none;
+}
+
+.header .navbar {
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background: var(--bg-color-1);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    width: 25rem;
+    transform-origin: top right;
+    transform: scale(0);
+}
+
+.header .navbar.active{
+    transform: scale(1);
+}
+
+.header .navbar a{
+    display: block;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: var(--text-color-1);
+    border-radius: 0.5rem;
+}
+
+.header .navbar a:hover{
+    color: var(--blue);
+    background: var(--bg-color-2);
+    padding-left: 2rem;
+}
+
+section{
+    padding: 2rem 7%;
+    padding-top: 10%;
+} 
+ 
+.home{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    
+}
+
+.home .image{
+    flex: 1 1 45rem;
+    padding-top: 20px;
+}
+
+.home .image img{
+    width: 85%;
+}
+
+.home .content {
+    flex: 1 1 41rem;
+}
+
+.home .content h3 {
+    color: var(--text-color-1);
+    font-size: 3rem;
+}
+
+.home .content p{
+    color: var(--text-color-2);
+    font-size: 1rem;
+    line-height: 1.7;
+    padding: 1rem 0;
+} 
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.8rem 4rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: #0000ff;
+    border-radius: 0.6rem;
+    cursor: pointer;
+}
+
+.btn:hover{
+    color: cadetblue;
+    letter-spacing: 0.3rem;
+}
+
+/* Apply section */
+.form-container form{
+    background: var(--bg-color-1);
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.form-container form .inputBox{
+    font-size: 1 1 24rem;
+}
+
+.form-container form .inputBox span{
+    font-size: 1.8rem;
+    color: var(--text-color-2);
+}
+
+.form-container form .inputBox input{
+    font-size: 1.6rem;
+    color: var(--text-color-2);
+    background: var(--bg-color-2);
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+    text-transform: none;
+    width: 100%;
+    padding: 1rem;
+}
+
+.form-container form .btn{
+    flex: 1 1 15rem;
+    margin-top: 25px;
+}
+
+/* ********** Our Residences Section ********* */
+.residences .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.3rem;
+}
+
+.residences .box-container .box{
+    background: var(--bg-color-1);
+    border-radius: 0.6rem;
+    box-shadow: var(--box-shadow);
+}
+
+.residences .box-container .box .image{
+    height: 26rem;
+    width: 100%;
+    padding: 1.5rem;
+    position: relative;
+}
+
+.residences .box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.6rem;
+}
+
+.residences .box .image h3 {
+    position: absolute;
+    top: 2.6rem;
+    left: 2.5rem;
+    font-size: 2rem;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    border-radius: 0.5rem;
+    font-weight: lighter;
+    padding: 0.5rem 1.5rem;
+}
+
+.residences .box .image h3 i{
+    color: var(--blue);
+}
+
+.residences .box-container .box .price{
+    font-weight: 550;
+    color: var(--text-color-1);
+    font-weight: 2.6rem;
+}
+
+.residences .box-container .content{
+    padding: 1.5rem;
+    padding-top: 0;
+}
+
+.residences .box-container .box .price span{
+    font-weight: lighter;
+    color: var(--text-color-2);
+    font-size: 1.6rem;
+    text-transform: line-through;
+}
+
+.residences .box-container .box .content p{
+    font-size:  1.6rem;
+    padding: 0.5rem;
+    color: var(--text-color-2);
+    line-height: 1.7rem;
+}
+
+/* ********* Values section *********** */
+
+.value .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+
+.value .box-container .box {
+    background: var(--bg-color-1);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    text-align: center;
+}
+
+.value .box-container .box h3{
+    padding: 1rem;
+    background: var(--bg-color-2);
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    color: var(--text-color-1);
+}
+
+li{
+    list-style: none;
+}
+
+.value .box-container .box .price {
+    padding-top: 2rem;
+}
+
+.value .box-container .box .price span{
+    font-size: 2.5rem;
+    color: var(--text-color-2);
+}
+
+.value .box-container .box .price .amount {
+    font-size: 5rem;
+    color: var(--text-color-1);
+    font-weight: bolder;
+}
+
+.value .box ul{
+    padding: 0.4rem 0;
+}
+
+.value .box ul li {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: var(--text-color-2);
+}
+
+/* ******** Contact Section****** */
+.contact{
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact form .inputBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact form .inputBox input,
+.contact form textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: var(--text-color-1);
+    margin: 0.7rem 0;
+    background: var(--bg-color-1);
+    box-shadow: var(--box-shadow);
+    text-transform: none;
+    border-radius: 0.4rem;
+}
+
+.contact form textarea {
+    height: 20rem;
+    resize: none;
+}
+
+.contact form .inputBox input {
+    width: 48%;
+}
+
+/* -----------footer Section ------------ */
+.footer{
+    background: var(--bg-color-1);
+}
+
+.footer .box-container{
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 2rem;
+    display: grid;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    color: var(--text-color-1);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.5rem;
+    color: var(--text-color-2);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a i{
+    padding-right: 0.5rem;
+    color: var(--blue);
+}
+
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+
+.credit{
+    font-size: 2rem;
+    text-align: center;
+    border-top: 0.1rem solid var(--text-color-2);
+    padding: 1rem;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    color: var(--text-color-2);
+}
+
+.credit span {
+    color: var(--blue);
+}
+
+/* ----------------The Responsivness section-------- */
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding: 1.5rem 2rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+
+}
+@media (max-width: 768px){
+    .header .navbar {
+        right: 2rem;
+    }
+    #search-btn {
+        display: inline-block;
+    }
+
+    .header .search-form{
+        position: absolute;
+        top: 115%;
+        right: 2rem;
+        background: var(--bg-color-1);
+        border-radius: 0.5rem;
+        width: 90%;
+        box-shadow: var(--box-shadow);
+        transform: scale(0);
+        transform-origin: top right;
+    }
+
+    .header .search-form.active{
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 450px){
+    html {
+        font-size: 50%;
+    }
+
+    .contact form .inputBox input{
+        width: 100%;
+    }
+
+
+}
+
+
+
+
+
+
+
